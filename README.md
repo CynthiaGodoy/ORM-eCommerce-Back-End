@@ -1,8 +1,8 @@
-# Object-Relational Mapping (ORM): E-Commerce Back End
+# ORM: eCommerce Back-End
 
 ## Description
 
-The back end for an e-commerce site by modifying starter code using Express.js API to use Sequelize to interact with a MySQL database. Use Insomnia to check all routes.
+The back end for an **Object Relational Mapping (ORM)** eCommerce site by modifying starter code using Express.js API to use Sequelize to interact with a MySQL database. Use Insomnia to check all routes.
 
 ## Installation
 [Initializer](https://docs.npmjs.com/cli/v8/commands/npm-init)
@@ -26,7 +26,7 @@ npm install sequelize
 npm install dotenv --save
 ```
 
-[To Install Insomnia](https://docs.insomnia.rest/insomnia/install)
+[To Install Insomnia](https://docs.insomnia.rest/insomnia/install) Insomnia is not installed as a CLI but it it a program used for opening API routes. 
 
 ## Usage
 
@@ -103,12 +103,12 @@ localhost:3001/api/categories/6
 
 `POST` Categories: Create Category
 ```
-locathost:3001/api/categories
+localhost:3001/api/categories
 ```
 
 `PUT` Categories: Update Category
 ```
-locathost:3001/api/categories/6
+localhost:3001/api/categories/6
 ```
 
 ### Database Models
