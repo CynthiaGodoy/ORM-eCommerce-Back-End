@@ -5,7 +5,7 @@ const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
 
-// DEFINE COLUMNS & RULES FOR CATEGORY MODEL | SET UP PER DATABASE MODELS ON README
+// DEFINE COLUMNS & RULES FOR CATEGORY MODEL | SET-UP PER DATABASE MODELS ON README
 Category.init(
   {
     id: {
