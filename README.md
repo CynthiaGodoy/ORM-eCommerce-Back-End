@@ -161,7 +161,7 @@ localhost:3001/api/categories/6
   
     * Integer.
   
-    * Doesn't allow null values.
+    *** Does** allow null values for deletion.
   
     * Set a default value of `10`.
   

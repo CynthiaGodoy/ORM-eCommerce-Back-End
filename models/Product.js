@@ -1,15 +1,46 @@
-// import important parts of sequelize library
+//USES SEQUELIZE LIBRARY | LOCATES DATABASE CONNECTION | INITIALIZE PRODUCT CLASS WITH SEQ MODEL CLASS 
 const { Model, DataTypes } = require('sequelize');
-// import our database connection from config.js
+
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// set up fields and rules for Product model
+// DEFINE COLUMNS & RULES FOR PRODUCT MODEL | SET UP PER DATABASE MODELS ON README
 Product.init(
   {
-    // define columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price: {
+      type:DataTypes.DECIMAL,
+      allowNull:false,
+      validate: {
+        isDecimal: true
+      }
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      validate: {
+        isNumeric: true    
+      }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true, // IF ALLOW NULLIS NOT SET TO TRUE, A CATEGORY CANNOT BE DELETED
+      references: { // FOREIGN KEY JOIN
+        model: 'category',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
