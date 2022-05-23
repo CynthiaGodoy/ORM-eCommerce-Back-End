@@ -1,21 +1,65 @@
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
-// The `/api/products` endpoint
+// THE `/api/products` ENDPOINT
 
-// get all products
+// GET ALL PRODUCTS
 router.get('/', (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  // FIND ALL PRODUCTS WITH ASSOCIATED | INCLUDE CATEGORY AND TAG DATA
+  Product.findAll({
+    include: [
+      {
+        model: Category
+      },
+      {
+        model: Tag,
+        attributes: ['tag_name'],
+        through: ProductTag,
+        as: 'productTag_tag'
+      }
+    ]
+  })
+  .then(productData => res.json(productData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+
 });
 
-// get one product
+// GET ALL PRODUCTS
 router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+  // FIND A SINGLE PRODUCT BY ITS `ID` | INCLUDE ITS ASSOCIATE CATEGORY AND TAG DATA
+  Product.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Category
+      },
+      {
+        model: Tag,
+        attributes: ['tag_name'],
+        through: ProductTag,
+        as: 'productTag_tag'
+      }
+    ]
+  })
+  .then(productData => {
+    if (!productData) {
+      res.status(404).json({ message: 'No product found with this id' });
+      return;
+    }
+    res.json(productData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
-// create new product
+// CREATE NEW PRODUCT
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
