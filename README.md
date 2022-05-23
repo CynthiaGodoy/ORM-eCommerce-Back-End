@@ -235,5 +235,4 @@ Note that the functionality for creating the many-to-many relationship for produ
 ![](images/Screenshot.PNG)
 
 - - - 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/
-licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
