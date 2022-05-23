@@ -5,7 +5,7 @@ const sequelize = require('../config/connection.js');
 
 class Tag extends Model {}
 
-// DEFINE COLUMNS & RULES FOR TAG MODEL | SET UP PER DATABASE MODELS ON README
+// DEFINE COLUMNS & RULES FOR TAG MODEL | SET-UP PER DATABASE MODELS ON README
 Tag.init(
   {
     id: {
