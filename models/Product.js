@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 
 class Product extends Model {}
 
-// DEFINE COLUMNS & RULES FOR PRODUCT MODEL | SET UP PER DATABASE MODELS ON README
+// DEFINE COLUMNS & RULES FOR PRODUCT MODEL | SET-UP PER DATABASE MODELS ON README
 Product.init(
   {
     id: {
