@@ -13,7 +13,7 @@ npm init
 [MySQL2 CLI](https://www.npmjs.com/package/mysql2) to connect to the SQL database and 
 perform queries.
 ```
-npm install mysql2
+npm install --save mysql2
 ```
 
 [Sequalize](https://sequelize.org/docs/v6/getting-started/)
@@ -226,6 +226,43 @@ Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `cat
 Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
 
 > **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
+
+### Files to Fix
+
+├── config
+│   └── connection.js - FIX
+|
+├── db
+│   └── schema.sql
+|
+├── models
+│   ├── Category.js   - FIX PER DATABASE MODELS ABOVE
+│   ├── Index.js      - FIX PER DATABASE MODELS ABOVE
+│   ├── Product.js    - FIX PER DATABASE MODELS ABOVE
+│   └── ProductTag.js - FIX PER DATABASE MODELS ABOVE
+|   |__ Tags.js       - FIX PER DATABASE MODELS ABOVE
+|
+├── package-lock.json - CREATE
+├── package.json - 
+|
+├── routes
+│   ├── api
+│   │   ├── index.js
+│   │   ├── Category Routes.js  - FIX
+│   │   ├── Product Routes.js   - FIX
+│   │   └── Tag Routes.js       - FIX
+|   |
+│   └── index.js
+|
+├── seeds
+│   ├── Category Seeds.js
+│   ├── index.js
+│   └── Product Seeds.js
+|   |__ Product Tag Seeds.js
+|   |__ Tag Seeds.js
+|   |__ .env
+|
+└── server.js 
 
 ## Walkthrough Video: 
 
