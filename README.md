@@ -37,12 +37,12 @@ mysql -u root -p
 
 Run schema file in SQL server.
 ```
-source schema.sql
+source db/schema.sql
 ```
 
 Exit SQL Terminal.
 ```
-quit
+exit
 ```
 
 Run the following commands in the Node Terminal.
@@ -227,9 +227,11 @@ Note that the functionality for creating the many-to-many relationship for produ
 
 > **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
 
-## Walkthrough Video: 
+## Walkthrough Videos: 
 
-[Screencastify]()
+[Screencastify for Insomnia Demonstration](https://drive.google.com/file/d/1D2IPPc2aYxKDSLi4KeT6PR_iaxxOd5nI/view)
+
+[Screencastify Steps for schema, seeds, and creating database](https://drive.google.com/file/d/1vk4BiSSoI9PLujRkh63Xd5FvwalBI8fx/view)
 
 ## Screenshot
 ![](images/Screenshot.PNG)

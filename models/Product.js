@@ -35,7 +35,7 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
-      allowNull: true, // IF ALLOW NULLIS NOT SET TO TRUE, A CATEGORY CANNOT BE DELETED
+      allowNull: true, // IF ALLOW NULL IS NOT SET TO TRUE, A CATEGORY CANNOT BE DELETED
       references: { // FOREIGN KEY JOIN
         model: 'category',
         key: 'id'
