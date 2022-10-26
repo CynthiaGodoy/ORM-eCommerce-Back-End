@@ -111,6 +111,15 @@ localhost:3001/api/categories
 localhost:3001/api/categories/6
 ```
 
+## Walkthrough Videos: 
+
+[ORM create seeds schema database.webm](https://user-images.githubusercontent.com/99221047/197925805-6a373fa7-2aab-4a7d-8368-5ac8e911a3c2.webm)
+
+[ORM eCommerce Insomnia Demo.webm](https://user-images.githubusercontent.com/99221047/197925834-ba2714b4-70ac-4225-9a0e-6874275abe64.webm)
+
+## Screenshot
+![](images/Screenshot.PNG)
+
 ### Database Models
 
 * `Category`
@@ -226,15 +235,6 @@ Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `cat
 Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
 
 > **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
-
-## Walkthrough Videos: 
-
-[Screencastify for Insomnia Demonstration](https://drive.google.com/file/d/1D2IPPc2aYxKDSLi4KeT6PR_iaxxOd5nI/view)
-
-[Screencastify Steps for schema, seeds, and creating database](https://drive.google.com/file/d/1vk4BiSSoI9PLujRkh63Xd5FvwalBI8fx/view)
-
-## Screenshot
-![](images/Screenshot.PNG)
 
 - - - 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
